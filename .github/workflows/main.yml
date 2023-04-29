@@ -1,6 +1,8 @@
 name: Mirroring
 
-on: [ main, develop ]
+on:
+  push:
+    branches: [main, develop]
 
 jobs:
   to_codecommit:
