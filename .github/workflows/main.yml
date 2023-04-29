@@ -1,6 +1,6 @@
 name: Mirroring
 
-on: [ push, delete ]
+on: [ main, develop ]
 
 jobs:
   to_codecommit:
