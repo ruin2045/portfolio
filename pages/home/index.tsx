@@ -1,6 +1,6 @@
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
-import { Contact } from './contact'
-import { Skill } from './skill'
+import Contact from './contact'
+import Skill from './skill'
 export default function Home() {
   return (
     <>

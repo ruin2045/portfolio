@@ -29,7 +29,7 @@ const StyledText = chakra(Text, {
   },
 })
 
-export function Contact() {
+function Contact() {
   const [isOpen, setIsOpen] = useState(false)
   const handleEmailIconClick = () => {
     setIsOpen(true)
@@ -66,14 +66,18 @@ const MailModal = (props: MailModalProps) => {
   } = useForm<FormValues>()
 
   const handleSendClick: SubmitHandler<FormValues> = async (values) => {
-    await axios({
-      method: 'POST',
-      url: 'https://1ga9bcga7j.execute-api.us-east-1.amazonaws.com/sendEmail',
-      data: {
-        title: values.title,
-        text: values.text,
-      },
-    })
+    try {
+      await axios({
+        method: 'POST',
+        url: 'https://1ga9bcga7j.execute-api.us-east-1.amazonaws.com/sendEmail',
+        data: {
+          title: values.title,
+          text: values.text,
+        },
+      })
+    } catch (error) {
+      console.log(error)
+    }
   }
   return (
     <Modal isOpen={props.isOpen} onClose={props.onClose}>
@@ -128,3 +132,5 @@ const MailModal = (props: MailModalProps) => {
     </Modal>
   )
 }
+
+export default Contact

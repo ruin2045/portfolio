@@ -1,9 +1,6 @@
 import { Box, Button, Container, Heading, Stack, Text } from '@chakra-ui/react'
-import { Inter } from 'next/font/google'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Top() {
   const router = useRouter()

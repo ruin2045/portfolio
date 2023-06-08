@@ -1,5 +1,5 @@
 import { Stack, Text, chakra } from '@chakra-ui/react'
-export function Skill() {
+function Skill() {
   const StyledText = chakra(Text, {
     baseStyle: {
       fontSize: '5xl',
@@ -18,3 +18,5 @@ export function Skill() {
     </Stack>
   )
 }
+
+export default Skill
