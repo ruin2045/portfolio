@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 export default function Top() {
   const router = useRouter()
   return (
-    <>
+    <Box id="root">
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
@@ -50,6 +50,6 @@ export default function Top() {
           </Stack>
         </Stack>
       </Container>
-    </>
+    </Box>
   )
 }
